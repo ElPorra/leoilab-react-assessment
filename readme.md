@@ -15,6 +15,7 @@ npm start
 ```
 This will open the WebBrowser and shows a QR code to scan with the Expo App
 that you can find [here](https://play.google.com/store/apps/details?id=host.exp.exponent&hl=es)
+(The PC and the cellphone must be in the same network)
 
 ## How to use it
 When the app starts it ask for email and password (it can be any valid mail and any password, it was just to try jwt)
