@@ -1,0 +1,60 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+      "flexDirection": "column",
+      "justifyContent": "center",
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "flex": 1,
+        "flexDirection": "row",
+        "paddingTop": 22,
+      }
+    }
+  >
+    <Image
+      source={
+        Object {
+          "uri": "https://avatars1.githubusercontent.com/u/29756043?v=4",
+        }
+      }
+      style={
+        Object {
+          "height": 50,
+          "width": 50,
+        }
+      }
+    />
+    <Text
+      style={
+        Object {
+          "fontSize": 18,
+          "height": 44,
+          "padding": 10,
+        }
+      }
+    >
+      adegano
+    </Text>
+  </View>
+  <Text
+    style={
+      Object {
+        "fontSize": 18,
+        "height": 44,
+        "padding": 10,
+      }
+    }
+  >
+    UserId:  
+    29756043
+  </Text>
+</View>
+`;
