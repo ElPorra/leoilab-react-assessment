@@ -20,7 +20,7 @@ that you can find [here](https://play.google.com/store/apps/details?id=host.exp.
 ## How to use it
 When the app starts it asks you for email and password (it can be any valid mail and any password, it was just to try jwt)
 Then you'll be redirected to the main page where you can find an input text and a search button.
-You have to write a valid github username and tap search; and the app will look for it on github's API and show it.
+You have to write a valid github username and tap search; and the app will looks for it on github's API and shows it.
 
 ## Tests
 This project uses jest for unit testing (now is only cheking if the UserInfo component can be created)
@@ -32,5 +32,5 @@ npm test
 ### About the project
 For this project I used ReactNative with Axios for fetching JSON data from the API.
 Jests for Unit Testing, and React-Navigation for routing.
-Always leting apart the logic and the calls to the API from the components, and relying in custom services and helpers.
+Always leting apart the logic and the calls to the API from the components and relying in custom services and helpers.
 
