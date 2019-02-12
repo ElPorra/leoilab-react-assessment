@@ -44,8 +44,12 @@ export default class HomeScreen extends React.Component<
         repos: null
       });
       const userResponse = await usersService.getUser(name);
-      const reposResponse = await usersService.getRepos(userResponse.data.login);
-      const followersResponse = await usersService.getFollowers(userResponse.data.login);
+      const reposResponse = await usersService.getRepos(
+        userResponse.data.login
+      );
+      const followersResponse = await usersService.getFollowers(
+        userResponse.data.login
+      );
       this.setState({
         loading: false,
         user: userResponse.data,

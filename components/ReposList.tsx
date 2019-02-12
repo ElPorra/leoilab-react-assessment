@@ -1,23 +1,16 @@
 import React from "react";
-import {
-  StyleSheet,
-  View,
-  Text,
-  ScrollView
-} from "react-native";
+import { StyleSheet, View, Text, ScrollView } from "react-native";
 import Layout from "../constants/Layout";
 
 export default class ReposList extends React.Component<IReposistProps> {
   render() {
     return (
       <ScrollView>
-        {this.props.repos.map(repo => 
+        {this.props.repos.map(repo => (
           <View key={repo.id} style={styles.rowContainer}>
-            <Text style={styles.name} >
-              {repo.name}
-            </Text>
+            <Text style={styles.name}>{repo.name}</Text>
           </View>
-        )}
+        ))}
       </ScrollView>
     );
   }

@@ -1,28 +1,17 @@
 import React from "react";
-import {
-  StyleSheet,
-  Image,
-  View,
-  Text,
-  ScrollView
-} from "react-native";
+import { StyleSheet, Image, View, Text, ScrollView } from "react-native";
 import Layout from "../constants/Layout";
 
 export default class UsersList extends React.Component<IUsersListProps> {
   render() {
     return (
       <ScrollView>
-        {this.props.users.map(user => 
+        {this.props.users.map(user => (
           <View key={user.id} style={styles.rowContainer}>
-          <Image
-          style={styles.image}
-          source={{ uri: user.avatar_url }}
-        />
-            <Text style={styles.name} >
-              {user.login}
-            </Text>
+            <Image style={styles.image} source={{ uri: user.avatar_url }} />
+            <Text style={styles.name}>{user.login}</Text>
           </View>
-        )}
+        ))}
       </ScrollView>
     );
   }

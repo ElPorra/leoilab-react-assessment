@@ -40,11 +40,11 @@ export default class UserInfo extends React.Component<
       showRepos: showRepos,
       showFollowers: showFollowers
     });
-  }
+  };
 
   _onCloseModal = () => {
     //
-  }
+  };
   render() {
     return (
       <View style={styles.rowContainer}>
@@ -107,10 +107,13 @@ export default class UserInfo extends React.Component<
                   style={{ marginLeft: Layout.sizingUnit }}
                 />
               </TouchableHighlight>
-             {this.state.showFollowers ? <UsersList users={this.props.followers}></UsersList>: null}
-             {this.state.showRepos ?  <ReposList repos={this.props.repos}></ReposList>: null}
+              {this.state.showFollowers ? (
+                <UsersList users={this.props.followers} />
+              ) : null}
+              {this.state.showRepos ? (
+                <ReposList repos={this.props.repos} />
+              ) : null}
             </View>
-          
           </View>
         </Modal>
       </View>
