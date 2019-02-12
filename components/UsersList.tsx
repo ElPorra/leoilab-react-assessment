@@ -12,6 +12,7 @@ export default class UsersList extends React.Component<IUsersListProps> {
             <Text style={styles.name}>{user.login}</Text>
           </View>
         ))}
+        {this.props.users.length === 0 ? <Text style={styles.name}>There is no data to display</Text>: null}
       </ScrollView>
     );
   }

@@ -11,6 +11,7 @@ export default class ReposList extends React.Component<IReposistProps> {
             <Text style={styles.name}>{repo.name}</Text>
           </View>
         ))}
+         {this.props.repos.length === 0 ? <Text style={styles.name}>There is no data to display</Text>: null}
       </ScrollView>
     );
   }
