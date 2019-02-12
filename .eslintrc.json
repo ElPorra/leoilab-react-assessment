@@ -1,0 +1,11 @@
+{
+    "extends": ["typescript",
+      "typescript/react",
+      "typescript/prettier",
+      "typescript/prettier-react"],
+    "plugins": ["prettier"],
+    "rules": {
+      "prettier/prettier": "error"
+    }
+  }
+  

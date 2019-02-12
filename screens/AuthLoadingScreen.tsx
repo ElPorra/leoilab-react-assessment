@@ -7,13 +7,17 @@ import {
   StyleSheet,
   View,
 }  from 'react-native';
+import { NavigationScreenProp } from 'react-navigation';
+interface IAutLoadingScreenProps {
+  navigation: NavigationScreenProp<any,any>
+}
 
-export default class AuthLoadingScreen extends React.Component {
+export default class AuthLoadingScreen extends React.Component<IAutLoadingScreenProps> {
   static navigationOptions = {
     header: null,
   };
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this._bootstrapAsync();
   }
 

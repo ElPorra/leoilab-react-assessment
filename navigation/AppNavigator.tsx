@@ -1,4 +1,3 @@
-import React from 'react';
 import { createAppContainer, createSwitchNavigator, createStackNavigator } from 'react-navigation';
 import SignInScreen from '../screens/SingInScreen';
 import AuthLoadingScreen from '../screens/AuthLoadingScreen';
