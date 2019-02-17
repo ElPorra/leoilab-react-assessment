@@ -1,4 +1,6 @@
-import React from "react";
+/// <reference path="./interfaces.d.ts" />
+import * as React from "react";
+import { Ionicons } from '@expo/vector-icons';
 import {
   StyleSheet,
   Image,
@@ -8,15 +10,14 @@ import {
   TouchableHighlight
 } from "react-native";
 import Layout from "../constants/Layout";
-import { Icon } from "expo";
 import UsersList from "./UsersList";
 import ReposList from "./ReposList";
 
 export default class UserInfo extends React.Component<
-  IUserInfoProps,
+  UserInfoProps,
   TUserInfoState
 > {
-  constructor(props) {
+  constructor(props: UserInfoProps) {
     super(props);
     this.state = {
       modalVisible: false,
@@ -33,6 +34,10 @@ export default class UserInfo extends React.Component<
         break;
       case "followers":
         showFollowers = true;
+        break;
+      default:
+        showRepos = false;
+        showFollowers = false;
         break;
     }
     this.setState({
@@ -62,7 +67,7 @@ export default class UserInfo extends React.Component<
             >
               <Text style={styles.name}>
                 Repos: {this.props.repos.length}
-                <Icon.Ionicons
+                <Ionicons
                   name="md-information-circle"
                   size={Layout.sizingUnit * 2}
                   style={{ marginLeft: Layout.sizingUnit }}
@@ -78,7 +83,7 @@ export default class UserInfo extends React.Component<
             >
               <Text style={styles.name}>
                 Followers: {this.props.followers.length}
-                <Icon.Ionicons
+                <Ionicons
                   name="md-information-circle"
                   size={Layout.sizingUnit * 2}
                   style={{ marginLeft: Layout.sizingUnit }}
@@ -101,7 +106,7 @@ export default class UserInfo extends React.Component<
                   this.setModalVisible(!this.state.modalVisible, "");
                 }}
               >
-                <Icon.Ionicons
+                <Ionicons
                   name="md-close-circle"
                   size={Layout.sizingUnit * 3}
                   style={{ marginLeft: Layout.sizingUnit }}

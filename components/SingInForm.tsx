@@ -1,14 +1,15 @@
-import React from "react";
+/// <reference path="./interfaces.d.ts" />
+import * as React from "react";
 import validators from "../helpers/Validators";
-import validate from "validate.js";
+import { single, validate } from "validate.js";
 import { TextInput, StyleSheet, Button, View } from "react-native";
 import Layout from "../constants/Layout";
 
 export default class SingInForm extends React.Component<
-  ISignInFormProps,
+  SignInFormProps,
   TSignInFormState
 > {
-  constructor(props) {
+  constructor(props: SignInFormProps) {
     super(props);
     this.state = {
       email: "",
@@ -26,8 +27,8 @@ export default class SingInForm extends React.Component<
       this.props.singIn(this.state.email, this.state.password);
     } else {
       this.setState({
-        emailError: validate.single(this.state.email, validators.email),
-        passwordError: validate.single(this.state.password, validators.password)
+        emailError: single(this.state.email, validators.email),
+        passwordError: single(this.state.password, validators.password)
       });
     }
   };
@@ -41,7 +42,7 @@ export default class SingInForm extends React.Component<
             placeholder=" e-mail"
             onBlur={() => {
               this.setState({
-                emailError: validate.single(this.state.email, validators.email)
+                emailError: single(this.state.email, validators.email)
               });
             }}
             style={this.state.emailError ? styles.errorInput : styles.input}
@@ -49,14 +50,14 @@ export default class SingInForm extends React.Component<
         </View>
         <View style={styles.contentContainer}>
           <TextInput
-            onChangeText={password => this.setState({ password })}
+            onChangeText={(password: string) => this.setState({ password })}
             placeholder=" password"
             secureTextEntry={true}
             autoCorrect={false}
             textContentType="password"
             onBlur={() => {
               this.setState({
-                passwordError: validate.single(
+                passwordError: single(
                   this.state.password,
                   validators.password
                 )

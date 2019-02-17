@@ -1,0 +1,43 @@
+{
+  "compilerOptions": {
+      "moduleResolution": "node",
+      "module": "commonjs",
+      "target": "es6",
+      "lib": [
+          "es2015"
+      ],
+      "jsx": "react",
+      "rootDir": "./",
+      "sourceMap": true,
+      "removeComments": false,
+      "preserveConstEnums": true,
+      "alwaysStrict": true,
+      "strictNullChecks": true,
+      "noImplicitAny": true,
+      "suppressImplicitAnyIndexErrors": true,
+      "noImplicitThis": true,
+      "noImplicitReturns": true,
+      "noEmitOnError": true,
+      "noUnusedLocals": true,
+      "noFallthroughCasesInSwitch": true,
+      "forceConsistentCasingInFileNames": true,
+      "skipLibCheck": true,
+      "skipDefaultLibCheck": true
+  },
+  "exclude": [
+      ".vscode-test",
+      "node_modules",
+      "node_modules/@types",
+      "node_modules/@types*",
+      "/node_modules",
+      "../node_modules",
+      "*node_modules*",
+      "/node_modules*",
+      "node_modules",
+      ".vscode",
+      "typings",
+      "tools/",
+  ],
+  "compileOnSave": false,
+  "buildOnSave":false
+}

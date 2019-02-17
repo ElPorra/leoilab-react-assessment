@@ -1,30 +1,28 @@
 /// <reference path="../typings/tsd.d.tsx" />
-interface IAppProps {
-  skipLoadingScreen: boolean;
-}
-interface ISearchFormProps {
+
+interface SearchFormProps {
   getUser(name: string): void;
 }
 
-interface ISignInFormProps {
+interface SignInFormProps {
   singIn(email: string, password: string): void;
 }
 
-interface IUserInfoProps {
+interface UserInfoProps {
   user: User;
   repos: Repo[];
   followers: User[];
 }
 
-interface IUsersListProps {
+interface UsersListProps {
   users: User[];
 }
 
-interface IReposistProps {
+interface ReposListProps {
   repos: Repo[];
 }
 
-interface ITabBarIconsProps {
+interface TabBarIconsProps {
   name: string;
   focused: boolean;
 }

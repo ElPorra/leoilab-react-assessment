@@ -1,8 +1,9 @@
-import React from "react";
+/// <reference path="./interfaces.d.ts" />
+import * as React from "react";
 import { StyleSheet, Image, View, Text, ScrollView } from "react-native";
 import Layout from "../constants/Layout";
 
-export default class UsersList extends React.Component<IUsersListProps> {
+export default class UsersList extends React.Component<UsersListProps> {
   render() {
     return (
       <ScrollView>
@@ -12,7 +13,9 @@ export default class UsersList extends React.Component<IUsersListProps> {
             <Text style={styles.name}>{user.login}</Text>
           </View>
         ))}
-        {this.props.users.length === 0 ? <Text style={styles.name}>There is no data to display</Text>: null}
+        {this.props.users.length === 0 ? (
+          <Text style={styles.name}>There is no data to display</Text>
+        ) : null}
       </ScrollView>
     );
   }

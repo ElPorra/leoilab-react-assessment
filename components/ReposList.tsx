@@ -1,8 +1,12 @@
-import React from "react";
+/// <reference path="./interfaces.d.ts" />
+import * as React from "react";
 import { StyleSheet, View, Text, ScrollView } from "react-native";
 import Layout from "../constants/Layout";
 
-export default class ReposList extends React.Component<IReposistProps> {
+export default class ReposList extends React.Component<ReposListProps> {
+  constructor(props: ReposListProps){
+   super(props);
+  }
   render() {
     return (
       <ScrollView>

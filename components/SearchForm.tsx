@@ -1,14 +1,15 @@
-import React from "react";
+/// <reference path="./interfaces.d.ts" />
+import * as React from "react";
 import { TextInput, StyleSheet, Button, View } from "react-native";
 import Layout from "../constants/Layout";
 export default class SearchForm extends React.Component<
-  ISearchFormProps,
+  SearchFormProps,
   TSearchformState
 > {
-  constructor(props: ISearchFormProps) {
+  constructor(props: SearchFormProps) {
     super(props);
     this.state = {
-      username: null,
+      username: '',
       loading: false,
       usernameError: false
     };

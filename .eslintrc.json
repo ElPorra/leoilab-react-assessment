@@ -1,11 +1,17 @@
 {
-    "extends": ["typescript",
-      "typescript/react",
-      "typescript/prettier",
-      "typescript/prettier-react"],
-    "plugins": ["prettier"],
-    "rules": {
-      "prettier/prettier": "error"
-    }
+  "extends": [
+    "typescript",
+    "typescript/react",
+    "typescript/prettier",
+    "typescript/prettier-react",
+    "airbnb"
+  ],
+  "plugins": ["prettier", "tslint"],
+  "rules": {
+    "tslint/config": ["warn", {
+      "lintFile": ".tslint.json",
+      "configFile": "tsconfig.json"
+  }],
+    "prettier/prettier": "error"
   }
-  
+}
