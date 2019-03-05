@@ -1,5 +1,3 @@
-# LeoILab Assessment
-
 ## Instructions
 
 ### Install required dependencies
